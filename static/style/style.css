@@ -1,0 +1,561 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* navbar settings */
+
+.navbar{
+    background-color: #f8f9fa !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: black;
+}
+
+.navbar .navbar-collapse .navbar-nav li{
+    font-size: 1.2rem;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    font-weight: 500;
+    text-shadow: none;
+}
+
+.navbar .navbar-collapse .navbar-nav li:hover{
+    background-color: rgb(95, 236, 210);
+    box-shadow: #999;
+}
+
+.navbar .navbar-collapse .navbar-nav li a:hover{
+    color: white;
+    text-shadow: none;
+}
+
+.navbar .navbar-collapse .navbar-nav .activeHome a{
+    color: black;
+}
+
+.nav-item .btn{
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-shadow: none;
+    border: none;
+    padding: 0 !important;
+    margin-top: 8px;
+}
+
+.nav-item .btn:hover{
+    /* font-weight: 700; */
+    text-shadow: none;
+    color: white;
+}
+
+.nav-item .btn:focus{
+    outline: none;
+    border: none;
+}
+
+/* ===========================Form Settings ========================= */
+.card {
+    border: none;
+}
+
+.card-body textarea {
+    resize: none;
+}
+
+.form-control {
+    border: none;
+    border-bottom: 2px solid silver;
+    background: transparent;
+    border-radius: none;
+    /* box-shadow: 10px 5px 5px black; */
+}
+
+.form-control:focus {
+    outline: none;
+    box-shadow: none;
+    background: transparent;
+    border-bottom: 2px solid silver;
+}
+
+::placeholder {
+    font-size: 15px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.footer .save-comment button {
+    background: rgb(82, 93, 249);
+    min-width: 80px;
+    cursor: pointer;
+    color: whitesmoke;
+    font-weight: 500;
+    padding: 9px 18px;
+    letter-spacing: 0px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* ================== Modal Settings ===================== */
+.modal .modal-body .nav-tabs .nav-item{
+    width: 50%;
+}
+
+.signin_tab input.form-control{
+    font-size: 12px;
+    color: #8c8c8c;
+    height: 40px;
+}
+
+.signin_link{
+    text-align: center;
+}
+
+.forget_link{
+    text-align: right;
+    font-size: 14px;
+
+}
+
+.forget_link a{
+    text-decoration: none;
+}
+
+
+/* post menue */
+.post-menues select {
+    border: none;
+    background: none;
+    outline: none;
+}
+
+#list {
+    border: none;
+    border-bottom: 2px dashed silver;
+}
+
+#list select:focus {
+    outline: 0px;
+    border: 0px;
+}
+
+/* Search button */
+.search {
+    border: none;
+    border-bottom: 2px solid silver;
+    display: inline-block;
+}
+
+.srchbar input {
+    border: none;
+    /* border-bottom: 2px solid silver; */
+}
+
+.srchbar input:focus {
+    border: none;
+    outline: none;
+    /* border-bottom: 2px solid silver; */
+}
+
+.post-vote {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 5% !important;
+    cursor: pointer;
+    padding: 8px 0 3px;
+    background: hsla(0, 0%, 100%, .8);
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    transition: all .1s ease-in-out
+}
+
+
+.post-vote .upvote {
+    width: 0;
+    height: 0;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-bottom: 9px solid rgba(35, 35, 35, .2);
+    margin-bottom: 3px;
+    transition: all .1s ease-in-out
+}
+
+.post-vote span {
+    min-height: 13px;
+    text-align: center;
+    line-height: 13px;
+    font-size: 15px;
+    line-height: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.post-vote .upvote.voted {
+    border-bottom: 9px solid #525df9
+}
+
+.post-vote:hover {
+    border: 1px solid rgba(35, 35, 35, .2)
+}
+
+.post-vote:hover .upvote:not(.voted) {
+    border-bottom: 9px solid rgba(35, 35, 35, .4)
+}
+
+.post-vote:hover .upvote.voted {
+    border-bottom: 9px solid #525df9
+}
+
+.post-link {
+    height: 115px !important;
+}
+
+.post-link a {
+    text-decoration: none;
+    list-style: none;
+}
+
+.post-link a .postTitle {
+    color: black;
+    font-size: 18px;
+}
+
+.truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.post-link .postDetails .truncate {
+    color: black;
+}
+
+.action {
+    position: fixed;
+    height: 50px;
+    width: 50px;
+    bottom: 40px;
+    right: 3rem;
+    cursor: pointer;
+    border-radius: 50%;
+    text-align: center;
+    background-color: black;
+    box-shadow: 2px 5px 5px #999;
+}
+
+.action span {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2em;
+    transition: 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+.action ul {
+    position: absolute;
+    right: 1rem;
+    bottom: 55px;
+    background: #f5f5f5;
+    min-width: 200px;
+    border-radius: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    box-shadow: 2px 5px 5px #999;
+}
+
+.action.active ul {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.3s;
+    bottom: 40px;
+    padding-left: 1rem;
+}
+
+.action ul li {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 0;
+    transition: 0.3s;
+}
+
+.action ul li:hover {
+    font-weight: 600;
+
+}
+
+.action ul li:not(:last-child) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.action ul li img {
+    margin-right: 10px;
+    opacity: 0.2;
+    transform: scale(0.8);
+}
+
+.action ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.action ul li:hover img {
+    opacity: 0.9;
+}
+
+.post-link .reaction {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.post-link .reaction .reply a {
+    color: #666;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    position: absolute;
+}
+
+.post-link .reaction .time-stamp {
+    color: #888;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all .1s ease-in-out;
+    font-size: 14px;
+}
+
+.reply-link a {
+    text-decoration: none;
+    list-style: none;
+}
+
+.reply-link .replyTitle {
+    color: black;
+    font-size: 20px;
+}
+
+
+.reply .replyContent {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.reply .replyContent .content-head .user-info {
+    display: inline-block;
+}
+
+.reply .replyContent .content-head .user-info span {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.reply .replyContent .content-body .reply-details {
+    /* padding-left: 59px; */
+    margin-top: 5px;
+}
+
+.reply .replyContent .content-body .reply-details span {
+    font-weight: 400;
+}
+
+.reply .replyContent .content-body .time-stamp {
+    color: #888;
+    line-height: 22px;
+    font-size: 15px;
+    line-height: 17px;
+    padding-left: 25px;
+}
+
+
+.reply .postComment .comment-body .card-header textarea {
+    min-height: 21px;
+    width: 100%;
+    resize: none;
+    color: #333;
+    font-size: 15px;
+    line-height: 22px;
+    opacity: 1;
+    outline: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background: none;
+    transform-style: preserve-3d;
+}
+.posts .postComment .comment-body .card-header textarea {
+    min-height: 21px;
+    width: 100%;
+    resize: none;
+    color: #333;
+    font-size: 15px;
+    line-height: 22px;
+    opacity: 1;
+    outline: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background: none;
+    transform-style: preserve-3d;
+}
+
+/* .reply .postComment .card-body {
+    display: flex;
+    
+} */
+
+.reply .postComment .comment-body .card-header {
+    padding-left: 15px;
+}
+
+.reply .postComment .comment-body .card-body {
+    padding: 10px;
+}
+
+.reply .postComment .comment-body .card-body .save-comment{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.posts .postComment .comment-body .card-header {
+    padding-left: 15px;
+}
+
+.posts .postComment .comment-body .card-body {
+    padding: 10px;
+}
+
+.posts .postComment .comment-body .card-body .save-comment{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.posts .postComment .comment-body .card-body .save-comment button {
+    background: rgb(82, 93, 249);
+    min-width: 80px;
+    cursor: pointer;
+    color: whitesmoke;
+    font-weight: 500;
+    padding: 8px;
+    letter-spacing: 0px;
+    border: none;
+    border-radius: 5px;
+}
+
+.reply .postComment .comment-body .card-body .save-comment button {
+    background: rgb(82, 93, 249);
+    min-width: 80px;
+    cursor: pointer;
+    color: whitesmoke;
+    font-weight: 500;
+    padding: 8px;
+    letter-spacing: 0px;
+    border: none;
+    border-radius: 5px;
+}
+
+.all-post-comment .section-name span {
+    color: #999;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    line-height: 17px;
+    text-transform: uppercase;
+}
+
+/* .all-post-comment .section-name{
+    display: flex;
+    flex-direction: row;
+} */
+
+.all-post-comment .section-name .options ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.all-post-comment .section-name .options ul li {
+    list-style: none;
+    cursor: pointer;
+}
+
+.all-post-comment .section-name .options ul li .active {
+    text-decoration: underline;
+}
+
+.all-post-comment .section-name .options ul li a {
+    text-decoration: none;
+    color: #999;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    line-height: 17px;
+    text-transform: uppercase;
+}
+
+.reply .all-post-comment .section-detail .avatar {
+    display: inline-block;
+}
+
+.reply .all-post-comment .section-detail .info {
+    display: inline-block;
+}
+
+.reply .all-post-comment .section-detail .info span {
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.reply .all-post-comment .section-detail .details span {
+    color: #333;
+    margin: 0 0 15px;
+    max-width: 800px;
+    font-size: 15px;
+    line-height: 22px;
+}
+
+.reply .all-post-comment .section-detail .reaction {
+    display: flex;
+    flex-direction: row;
+}
+
+.reply .all-post-comment .section-detail .reaction .reply a {
+    color: #666;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 500;
+    position: absolute;
+}
+
+.reply .all-post-comment .section-detail .reaction .time-stamp {
+    color: #888;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all .1s ease-in-out;
+    font-size: 14px;
+}
+
+.reply .all-post-comment .section-detail .reaction .mid-dot {
+    color: #666;
+    font-size: 12px;
+    line-height: 17px;
+}

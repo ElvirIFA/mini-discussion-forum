@@ -1,0 +1,78 @@
+{% include 'header.html' %}
+<title>Comments</title>
+<body>
+    {% include 'navbar.html' %}
+    <div class="container">
+        <p class="display-6 text-center fw-bold my-2" >{{question.text}}</p>
+    </div>
+
+    <!-- Left Side -> Create Post Box -->
+    <div class="row">
+        <div class="col-md-4 col-12 mt-4" id="post-form">
+            <div class="card bg-light shadow border border-light ms-5" style="width: 83%;">
+                <h5 class="card-title mt-3 text-center">Answer this question</h5>
+                <form action="/create_comment/{{question.id}}" method="post">
+                    <div class="card-body" style="padding: 10px;">
+                        <div>
+                            <label for="post-details" class="form-label">A short descriptive answer</label>
+                            <textarea class="form-control shadow-sm" name="claim_text" id="post-details" aria-describedby="PostDetails"
+                                placeholder="Any Details here!" cols="20" rows="5"  {% if current_user.is_authenticated %} onkeyup="unlock_btn(this.id);" {% endif %} ></textarea>
+                        </div>
+                    </div>
+                    <div class="footer my-1 px-2">
+                        <div class="save-comment mb-1">
+                            <button type="submit" id="submit_btn" disabled style="background-color: rgb(95, 236, 210); color: black; font-weight: 400;" class="shadow-sm">Answer</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Right Side -> Show Posts -->
+        <div class="col-md-8 col-12">
+            <!-- Posts Section -->
+            <div class="row mt-4">
+
+                <!-- POSTS -->
+                <div class="posts">
+
+                    {% if comments %}
+                    {% for comment in comments %}
+                    <!-- 1st post start -->
+                    <div class="row single-post trending mb-3">
+                        <div class="col-8 post-link shadow-sm border border-1 py-2">
+                            <div class="postTitle">
+                                <span class="fw-bold post-title-text">{{comment.username}}</span>
+                            </div>
+                            <div class="postDetails my-2">
+                                <div class="truncate" style="-webkit-line-clamp: 2;">{{comment.text}}</div>
+                            </div>
+                            <div class="reaction mt-3">
+                                <div class="time-stamp">{{comment.created_at}}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 1st post ends -->
+                    {% endfor %}
+                    {% else %}
+                    <h2>No answers available!</h2>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+
+        <script src="../static/assets/bubbler-master/src/bubbler.min.js"></script>
+        <script src="https://use.fontawesome.com/bd48d6d264.js"></script>
+        <script src="../static/js/script.js"></script>
+</body>
+
+</html>
